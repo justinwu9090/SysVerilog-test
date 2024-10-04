@@ -1,5 +1,5 @@
-Analysis & Elaboration report for DE1_SoC
-Thu Oct  3 16:16:11 2024
+Analysis & Synthesis report for DE1_SoC
+Thu Oct  3 20:10:46 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
 
 
 
@@ -35,9 +35,9 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-----------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                          ;
+; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Oct  3 16:16:11 2024              ;
+; Analysis & Synthesis Status        ; Failed - Thu Oct  3 20:10:46 2024                  ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Standard Edition ;
 ; Revision Name                      ; DE1_SoC                                            ;
 ; Top-level Entity Name              ; fullAdder                                          ;
@@ -56,24 +56,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+----------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -158,24 +142,43 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Standard Edition
-    Info: Processing started: Thu Oct  3 16:15:58 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC --analysis_and_elaboration
+    Info: Processing started: Thu Oct  3 20:10:31 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file full_adder.sv
     Info (12023): Found entity 1: fullAdder File: C:/Users/Justi/Documents/GitHub/DE1_SoC/full_adder.sv Line: 23
     Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/Justi/Documents/GitHub/DE1_SoC/full_adder.sv Line: 32
-Info (12127): Elaborating entity "fullAdder" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Thu Oct  3 16:16:11 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:35
+Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
+    Info (12023): Found entity 1: DE1_SoC File: C:/Users/Justi/Documents/GitHub/DE1_SoC/DE1_SoC.sv Line: 1
+Error (10170): Verilog HDL syntax error at class_example.sv(1) near text: "class";  expecting a description. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Justi/Documents/GitHub/DE1_SoC/class_example.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file class_example.sv
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4710 megabytes
+    Error: Processing ended: Thu Oct  3 20:10:46 2024
+    Error: Elapsed time: 00:00:15
+    Error: Total CPU time (on all processors): 00:00:39
 
 
